@@ -1,18 +1,13 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from './HomePage';
-import ProductCard from './ProductCard';
-import Error from './Error';
+import './App.css';
+import Comp1 from './Comp1';
+import Comp2 from './Comp2';
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route exact path='/' element={<HomePage/>} />
-        <Route path='/product/:id' element={<ProductCard/>} />
-        <Route path='*' element={<Error/>} />
-      </Routes>
-    </Router>
+    <>
+    <Comp1/>
+    <Comp2/>
+    </>
   );
 };
 
