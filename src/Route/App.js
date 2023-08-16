@@ -1,10 +1,10 @@
 // import logo from './logo.svg';
-import Header from './Header/Header';
+import Header from '../Header/Header';
 import './App.css';
 // import Goods from './Goods';
 import About from './About';
 import Users from './Users';
-import Error from './Error';
+import Error from '../Error';
 import Main from './Main';
 import UserId from './UserId';
 
