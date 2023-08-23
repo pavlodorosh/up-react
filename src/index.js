@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './Shop/App';
+import App from './Hook/App';
 // import reportWebVitals from './reportWebVitals';
 // console.log(React.version);
 
