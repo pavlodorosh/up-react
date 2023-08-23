@@ -7,14 +7,15 @@ class Goods extends React.Component{
         this.props.addToCart(this.props.product.id);
     }
     render(){
-        const { title, cost } = this.props.product;
+        const { title, cost, image, articul } = this.props.product;
+        const trimArticul = articul.trim();
         return(
             <>
             <div className="goods">
-                <img src="" alt="" />
+                <img src={image} alt={title}/>
                 <div>{title}</div>
                 <div>{cost}</div>
-                <Link to={`/product/${this.props.product.articul}`}>Link to product page</Link>
+                <Link to={`/product/${trimArticul}`}>To Product Page</Link>
                 <button onClick={this.handlerAddToCart}>
                     Add to cart
                 </button>

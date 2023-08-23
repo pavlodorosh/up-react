@@ -9,9 +9,9 @@ class HomePage extends React.Component{
             <>
             <h1>Home page</h1>
             <div className="goods-list">
-                {this.props.products.map((product) =>{
+                {this.props.products.map( (product) => (
                     <Goods key={product.articul} product={product} addToCart={this.props.addToCart}/>
-                })}
+                ))}
             </div>
             <Link to="/cart">Go to Cart</Link>
             </>
