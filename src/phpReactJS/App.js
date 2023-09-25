@@ -24,7 +24,7 @@ function App(){
           })
     }
     function task1(){
-        fetch("http://reactphp.dahpro.com.ua/",{
+        fetch("http://localhost:3500/",{
             method: 'POST',
             header: {
                 'Content-Type': 'application/x-www-form-urlencoded',
@@ -42,7 +42,7 @@ function App(){
         let elements = event.target.elements;
         let inp1 = elements['num1'].value
         let inp2 = elements['num2'].value
-        fetch("http://reactphp.dahpro.com.ua/",{
+        fetch("http://localhost:3500/",{
         method: 'POST',
         header: {
             'content-type': 'application/x-www-form-urlencoded',
@@ -60,7 +60,7 @@ function App(){
         let elements = event.target.elements;
         let inp1 = elements['filename'].value;
         let inp2 = elements['filedata'].value;
-        fetch("http://reactphp.dahpro.com.ua/", {
+        fetch("http://localhost:3500/", {
         method: 'POST',
         header: {
             'content-type': 'application/x-www-form-urlencoded',
@@ -77,7 +77,7 @@ function App(){
 
     function task4(event) {
         event.preventDefault()
-        fetch("http://reactphp.dahpro.com.ua/", {
+        fetch("http://localhost:3500/", {
         method: 'POST',
         header: {
             'content-type': 'application/x-www-form-urlencoded',
@@ -90,7 +90,7 @@ function App(){
 
     function task5(event) {
         event.preventDefault()
-        fetch("http://reactphp.dahpro.com.ua/",{
+        fetch("http://localhost:3500/",{
         method: 'POST',
         header: {
             'content-type': 'application/x-www-form-urlencoded',
@@ -136,7 +136,7 @@ function App(){
             <div><input type="text" name="filedata" /></div>
             <button type="sumbit">Push</button>
             </form>
-            <p>{(t3) ? <a href={`http://reactphp.dahpro.com.ua/files/${t3}`} rel="noopener" download>Скачать</a> : false}</p>
+            <p>{(t3) ? <a href={`http://localhost:3500/files/${t3}`} rel="noopener" download>Скачать</a> : false}</p>
             <p>{t3}</p>
             </div>
         <hr/>
