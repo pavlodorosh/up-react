@@ -6,9 +6,9 @@ import env from '../env.json';
 function Note() {
     let {noteURL} = useParams();
     const [noteText, setNoteText] = useState('');
-    const [lineClass, setLineClass] = useState('hide');
-    const [formClass, setFormClass] = useState('hide');
-    const [errorClass, setErrorClass] = useState('hide');
+    const [lineClass, setLineClass] = useState('d-none');
+    const [formClass, setFormClass] = useState('d-none');
+    const [errorClass, setErrorClass] = useState('d-none');
 
     useEffect(() => {
         if(noteURL !== undefined){
@@ -24,20 +24,20 @@ function Note() {
                     console.log(response);
                     if(response.result){
                         setNoteText(response.note);
-                        setFormClass('hide');
+                        setFormClass('d-none');
                         setLineClass('');
-                        setErrorClass('hide');
+                        setErrorClass('d-none');
                     }
                     else if(!response.result){
                         setFormClass('');
-                        setLineClass('hide');
-                        setErrorClass('hide');
+                        setLineClass('d-none');
+                        setErrorClass('d-none');
                     }
                 })
         }else{
             setFormClass('');
-            setLineClass('hide');
-            setErrorClass('hide');
+            setLineClass('d-none');
+            setErrorClass('d-none');
         }
     }, [noteURL]);
 
@@ -50,7 +50,9 @@ function Note() {
             return false;
         }
         noteURL = url;
-        window.location.href = env.url+'/'+url;
+        let note_url = url.replace(env.url,'');
+        window.location.href =  window.location.href + '/' + note_url;
+
     }
     return (
         <div>

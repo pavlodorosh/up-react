@@ -5,11 +5,11 @@ import env from '../env.json';
 function Create() {
 
     const [url, setUrl] = useState('');
-    const [lineClass, setLineClass] = useState('hide');
+    const [lineClass, setLineClass] = useState('d-none');
     const [formClass, setFormClass] = useState('');
 
     let sendData = (obj) => {
-        setFormClass('hide');
+        setFormClass('d-none');
         setLineClass('');
         fetch(env.urlBackend, {
             method: 'POST',
@@ -22,7 +22,7 @@ function Create() {
             .then( response => {
                 console.log(response);
                 if(response.result){
-                    setUrl(env.url+'/'+response.url);
+                    setUrl(env.url+response.url);
                 }
             })
     }
@@ -35,6 +35,7 @@ function Create() {
             alert('Note is empty');
             return false;
         }
+        console.log(note);
         sendData({"note" : note});
     }
 

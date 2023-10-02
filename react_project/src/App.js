@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // /about
 // /create
 // /note
@@ -18,7 +18,7 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<Main />} />
+          <Route  exact="true" path='/' element={<Main />} />
           <Route path="/about" element={<About />} />
           <Route path="/create" element={<Create />} />
           <Route path="/note" element={<Note />} />
